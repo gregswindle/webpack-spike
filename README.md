@@ -38,8 +38,9 @@ __Prerequisite software__
 
 ```shell
 $ npm i https://github.com/gregswindle/webpack-spike.git
+$ cd webpack-spike
+$ npm install
 ```
-
 
 ## Configuration
 
@@ -47,8 +48,58 @@ View [webpack.config.js](webpack.config.js) for configuration details.
 
 ## Usage
 
+Open a Terminal, navigate to the `webpack-spike` directory, and run:
+
 ```
 $ npm run build
+```
+
+This executes the following workflow:
+
+ 1. Clean the target/output directory
+
+    :arrow_down:
+
+ 1. Bundle source files
+
+    :arrow_down:
+
+ 1. Creates target directories and files.
+
+    :arrow_down:
+
+ 1. Generates an entry HTML with JavaScript and CSS loaders.
+
+  ```bash
+  $ npm run build
+
+  > webpack-spike@1.0.0 build /Users/swindle/Projects/github/gregswindle/webpack-spike
+  > webpack
+
+  clean-webpack-plugin: /Users/swindle/Projects/github/gregswindle/webpack-spike/frontend-templates/target has been removed.
+  Hash: 4ee65a656f52f8cd9522
+  Version: webpack 3.10.0
+  Time: 1093ms
+            Asset       Size  Chunks                    Chunk Names
+    app.bundle.js     544 kB       0  [emitted]  [big]  app
+  print.bundle.js    2.52 kB       1  [emitted]         print
+       index.html  254 bytes          [emitted]
+     [0] ./frontend-templates/src/main/resources/themes/c2b/default-theme/js/index.js 264 bytes {0} [built]
+     [2] (webpack)/buildin/global.js 509 bytes {0} [built]
+     [3] (webpack)/buildin/module.js 517 bytes {0} [built]
+     [4] ./frontend-templates/src/main/resources/themes/c2b/default-theme/js/print.js 13 bytes {1} [built]
+      + 1 hidden module
+  Child html-webpack-plugin for "index.html":
+       1 asset
+         [2] (webpack)/buildin/global.js 509 bytes {0} [built]
+         [3] (webpack)/buildin/module.js 517 bytes {0} [built]
+          + 2 hidden modules
+  ```
+
+    To view the generated HTML file, run the following command in your Terminal:
+
+    ```bash
+    $ open frontend-templates/target/main/resources/themes/c2b/default-theme/js/index.html
 ```
 
 ## Background
