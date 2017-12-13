@@ -1,0 +1,5 @@
+// It's much easier to add babel presets and plugins
+// here instead of inside the webpack config
+{
+  "presets": ["env"]
+}

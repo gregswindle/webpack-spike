@@ -32,10 +32,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         // Use is how you declare your main options for the loader
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          loader: 'babel-loader'
         }
       }
     ]

@@ -13,5 +13,6 @@
   "scripts": {
     "dev": "webpack -w",
     "build": "webpack"
-  }
+  },
+  "browserslist": ["> 1%", "last 2 versions"]
 }
