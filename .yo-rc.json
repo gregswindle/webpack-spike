@@ -1,0 +1,9 @@
+{
+  "generator-community": {
+    "promptValues": {
+      "authorUrl": "https://github.com/gregswindle",
+      "lang": "Node.js",
+      "dependencyManager": "npm"
+    }
+  }
+}

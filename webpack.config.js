@@ -1,20 +1,37 @@
 // Since thie file isn't compiled by webpack,
 // imports have to be commonjs format
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+const paths = {
+  entry: './frontend-templates/src/main/resources/themes/c2b/default-theme/js',
+  output: path.resolve(__dirname, './frontend-templates/target/main/resources/themes/c2b/default-theme/js')
+}
 
 module.exports = {
   // Webpack can only have one entry point sadly,
   // but this file basically webs over ever file it touches
-  entry: './src/index.js',
+  entry: {
+    app: `${paths.entry}/index.js`,
+    print: `${paths.entry}/print.js`,
+  },
+
+  plugins: [
+    new CleanWebpackPlugin(['./frontend-templates/target']),
+    new HtmlWebpackPlugin({
+      title: 'Output Management'
+    })
+  ],
 
   // Declare our main output
   output: {
     // This is the export path
-    path: path.resolve(__dirname, 'dist'),
+    path: paths.output,
 
     // There are different types of things you can configure here,
     // But a simple bundle.js is good for getting everything
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
 
     // I usually output my web used stuff as UMD to
     // make it easily consumed via web
@@ -34,6 +51,18 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      // @see https://webpack.js.org/guides/asset-management/
+      {
+        // webpack uses a regular expression to determine which files it 
+        // should look for and serve to a specific loader. In this case any
+        // file that ends with .css will be served to the style-loader and 
+        // the css-loader.
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       }
     ]
   },
@@ -44,6 +73,9 @@ module.exports = {
   // in a file. As well, anything that is `./filename` imported
   // can be assumed a local file, while 'filename' would be a dependency
   resolve: {
-    modules: ['node_modules', path.resolve(__dirname, 'app')]
+    modules: [
+      'node_modules', 
+      path.resolve(__dirname, 'frontend-templates/target/main/resources/themes/c2b/default-theme')
+    ]
   }
 }
