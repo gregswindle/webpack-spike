@@ -1,8 +1,5 @@
 # `webpack-spike`
-
-__TODO:__ Put badges here. MIT
-
-> A sample webpack demo.
+> A sample webpack spike to evaluate frontend tools that optimize our build-test-deploy workflows and increase time-to-value.
 
 ## Table of contents
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (TOC:excludeText=Table of contents) -->
@@ -16,13 +13,22 @@ __TODO:__ Put badges here. MIT
 - [License](#license)
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
-## Overview
-> :book: Check out these resources.
+## Overview of tools
+> **:ballot_box_with_check: I recommend we try Poi.**
 
-* [Poi](https://poi.js.org/#/home)
-* [webpack](https://webpack.js.org/guides/getting-started/)
+* [Poi](https://poi.js.org/#/home) is a configuration-free CLI that automatically enables builds optimized and minified apps with:
+  - Transpilation and bundling (with webpack and babel/postcss)
+  - Hot code reloading
+  - Files in ./static are copied to dist folder, eg. static/favicon.ico to dist/favicon.ico
+  - Vue JSX component support by default with `babel-preset-vue-app`
+  - Code-splitting
+  - Polyfills (if required)
+  - Webpack support
+  - Custom HTML output with the `html-webpack-plugin`
 * [Results for js web frameworks benchmark - round 6](http://www.stefankrause.net/js-frameworks-benchmark6/webdriver-ts-results/table.html). Use this to compare Vue and React.
 * [Vue.js: Single File Components](https://vuejs.org/v2/guide/single-file-components.html)
+* [webpack: Getting Started](https://webpack.js.org/guides/getting-started/)
+* [webpack: GitHub](https://github.com/webpack/webpack)
 
 ## Installation
 
@@ -47,9 +53,7 @@ $ npm run build
 
 ## Background
 
-_If `webpack-spike` depends on important but not widely known abstractions or other ecosystems, explain them here. This is also a good place to explain the product's motivation if similar products already exist._
-
-
+Modern MPAs and SPAs use linters, bundlers, and minifiers in order to quickly and efficiently serve backward-compatible and accessible content on multiple browsers.
 
 ## Semantic version and `CHANGELOG`
 
