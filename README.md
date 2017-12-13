@@ -40,7 +40,7 @@ View [webpack.config.js](webpack.config.js) for configuration details.
 ## Usage
 
 ```
-$ npm build
+$ npm run build
 ```
 
 ## Background
