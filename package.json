@@ -8,11 +8,15 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "jquery": "^3.2.1",
     "webpack": "^3.10.0"
   },
   "scripts": {
     "dev": "webpack -w",
     "build": "webpack"
   },
-  "browserslist": ["> 1%", "last 2 versions"]
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

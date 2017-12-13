@@ -2,8 +2,12 @@
 // the root files are treated as node modules
 // probably don't do this :)
 import hello from 'hello'
+import { log } from './utils'
+import $ from 'jquery'
 
 const world = 'world'
-console.log(`${hello}, ${world}!`)
+log(`${hello}, ${world}!`)
 
 const test = 'test'
+
+$('body').addClass('active')

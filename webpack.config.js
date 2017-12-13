@@ -1,11 +1,14 @@
 // Since thie file isn't compiled by webpack,
 // imports have to be commonjs format
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   // Webpack can only have one entry point sadly,
   // but this file basically webs over ever file it touches
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js'
+  },
 
   // Declare our main output
   output: {
@@ -14,7 +17,7 @@ module.exports = {
 
     // There are different types of things you can configure here,
     // But a simple bundle.js is good for getting everything
-    filename: 'bundle.js',
+    filename: '[name].js',
 
     // I usually output my web used stuff as UMD to
     // make it easily consumed via web
@@ -37,6 +40,12 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common'
+    })
+  ],
 
   // If you have a ton of directories you could make the
   // path references easier by adding them here, but I prefer
