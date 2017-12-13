@@ -17,10 +17,12 @@ __TODO:__ Put badges here. MIT
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
 ## Overview
+> :book: Check out these resources.
 
 * [Poi](https://poi.js.org/#/home)
 * [webpack](https://webpack.js.org/guides/getting-started/)
 * [Results for js web frameworks benchmark - round 6](http://www.stefankrause.net/js-frameworks-benchmark6/webdriver-ts-results/table.html). Use this to compare Vue and React.
+* [Vue.js: Single File Components](https://vuejs.org/v2/guide/single-file-components.html)
 
 ## Installation
 
