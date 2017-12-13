@@ -3,18 +3,21 @@
 const path = require('path')
 
 module.exports = {
-  // Webpack can only have one entry point sadly,
-  // but this file basically webs over ever file it touches
-  entry: './src/index.js',
+  // Multi-entry points
+  //
+  // These need to be named in order to parse correctly
+  entry: {
+    app: './src/index.js',
+    other: './src/other.js'
+  },
 
   // Declare our main output
   output: {
     // This is the export path
     path: path.resolve(__dirname, 'dist'),
 
-    // There are different types of things you can configure here,
-    // But a simple bundle.js is good for getting everything
-    filename: 'bundle.js',
+    // The cool part is you can reference name here!
+    filename: '[name].bundle.js',
 
     // I usually output my web used stuff as UMD to
     // make it easily consumed via web
