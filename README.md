@@ -96,10 +96,10 @@ This executes the following workflow:
           + 2 hidden modules
   ```
 
-    To view the generated HTML file, run the following command in your Terminal:
+To view the generated HTML file, run the following command in your Terminal:
 
-    ```bash
-    $ open frontend-templates/target/main/resources/themes/c2b/default-theme/js/index.html
+```bash
+$ open frontend-templates/target/main/resources/themes/c2b/default-theme/js/index.html
 ```
 
 ## Background
@@ -122,8 +122,8 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 
   1. **[Create an issue][issues-url]**&mdash;e.g., a [defect ("bug") report][issues-new-defect-url] or a [feature request][issues-new-feat-url]&mdash;to propose changes.
 
-    _Exceptions:_
-    > If you're working on documentation and fixing something simple like a typo or an easy bug, go ahead and make a pull request.
+  _Exceptions:_
+  > If you're working on documentation and fixing something simple like a typo or an easy bug, go ahead and make a pull request.
 
   1. **[Follow the CONTRIBUTING guidelines][contributing-url].**
 
